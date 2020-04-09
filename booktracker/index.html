@@ -10,7 +10,7 @@
         <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> My Library Tracker Through GitLens </title>
+        <title> My Library Tracker </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
@@ -19,6 +19,8 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+
     <div class="header-container">
 
             
@@ -37,10 +39,13 @@
 
         
         <div class="content">
+                    
             <form id ="add-book-form">
-                <input type="text" name="title" placeholder="Title">
+                
+                <input type="text" name="title" placeholder="TitlePOLLA">
                 <input type="text" name="author" placeholder="Author">
-                <input type="range" name="rating" id="rating-range" min="0" max="10" value="5" class="slider">
+                <input type="range" min="0" max="100" step="1" value="0" name="rating" id="rating-range" value="0" class="slider">
+                <!-- <input type="range" name="rating" id="rating-range" min="0" max="10" value="5" class="slider"> -->
                 <input type="checkbox" name="read">
                 <button>Add book</button>
             </form>
