@@ -1,0 +1,87 @@
+                                                                                                                                                                                                                                                        <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+                
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> My Library Tracker </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="header-container">
+
+            
+        <div class="header">
+            <h1> My Library Tracker</h1>
+        </div>
+
+        
+    </div>
+        
+
+        
+
+        
+
+
+        
+        <div class="content">
+            <form id ="add-book-form">
+                <input type="text" name="title" placeholder="Title">
+                <input type="text" name="author" placeholder="Author">
+                <input type="range" name="rating" id="rating-range" min="0" max="10" value="5" class="slider">
+                <input type="checkbox" name="read">
+                <button>Add book</button>
+            </form>
+
+            <ul id="book-list">
+
+            </ul>
+            
+        </div>
+
+
+
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD6JUHCaD55_dsX3hh3eHEHqeiZGgonyAg",
+    authDomain: "mabooktracker.firebaseapp.com",
+    databaseURL: "https://mabooktracker.firebaseio.com",
+    projectId: "mabooktracker",
+    storageBucket: "mabooktracker.appspot.com",
+    messagingSenderId: "431681107958",
+    appId: "1:431681107958:web:3b99c7ff59cfe2a42cf9d7",
+    measurementId: "G-E37BV1DDM9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  const db = firebase.firestore();
+//   db.settings({timestampsInSnapshots: true});
+</script>
+
+
+
+
+        <script src="java.js" async defer></script>
+    </body>
+</html>
