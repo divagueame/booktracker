@@ -41,13 +41,18 @@
         <div class="content">
                     
             <form id ="add-book-form">
-                
-                <input type="text" name="title" placeholder="TitlePOLLA">
-                <input type="text" name="author" placeholder="Author">
-                <input type="range" min="0" max="100" step="1" value="0" name="rating" id="rating-range" value="0" class="slider">
-                <!-- <input type="range" name="rating" id="rating-range" min="0" max="10" value="5" class="slider"> -->
-                <input type="checkbox" name="read">
-                <button>Add book</button>
+                <div class="form-item titleInputHolder">
+                    <input class="titleInput" type="text" name="title" placeholder="Title"></div>
+                <div class="form-item authorInputHolder">
+                    <input class="authorInput" type="text" name="author" placeholder="Author">
+                </div>                
+                <div class="form-item rangeContainer">
+                    <div class="rangeValue">0</div>
+                    <input class="slider" type="range" min="0" max="100" step="1" value="0" name="rating" id="rating-range" >
+                </div>
+                <div class="form-item addBookButtonHolder">
+                    <button class="addBookButton">Add book</button>
+                </div>
             </form>
 
             <ul id="book-list">

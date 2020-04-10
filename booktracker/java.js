@@ -6,20 +6,17 @@ function renderBook(book){
     let title = document.createElement("span");
     let author = document.createElement("span");
     let rating = document.createElement("span");
-    let read = document.createElement("span");
     let cross = document.createElement("div");
     
     li.setAttribute('data-id', book.id);
     title.textContent = book.data().title;
     author.textContent = book.data().author;
     rating.textContent = book.data().rating;
-    read.textContent = book.data().read;
     cross.textContent = 'x';
 
     li.appendChild(title);
     li.appendChild(author);
     li.appendChild(rating);
-    li.appendChild(read);
     li.appendChild(cross)
     bookList.appendChild(li);
 
@@ -47,12 +44,10 @@ addBookForm.addEventListener('submit',(e) =>{
         title: addBookForm.title.value,
         author: addBookForm.author.value,
         rating: addBookForm.rating.value,
-        read: addBookForm.read.value
     });
     addBookForm.title.value = '';
     addBookForm.author.value = '';
     addBookForm.rating.value = '';
-    addBookForm.read.value = '';
 })
 
 
@@ -60,6 +55,7 @@ addBookForm.addEventListener('submit',(e) =>{
 // REALTIME LISTENER
 db.collection('myLibrary').orderBy('title').onSnapshot(snapshot=>{
     let changes = snapshot.docChanges();
+    console.log(changes)
     changes.forEach((change)=>{
         if(change.type == 'added'){
             renderBook(change.doc)
@@ -78,7 +74,7 @@ var elem = document.querySelector('input[type="range"]');
 
 var rangeValue = function(){
   var newValue = elem.value;
-  var target = document.querySelector('.value');
+  var target = document.querySelector('.rangeValue');
   target.innerHTML = newValue;
 }
 

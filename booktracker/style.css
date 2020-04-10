@@ -46,55 +46,84 @@
       color: var(--light1);
   }
 
-ul{
 
-    list-style: none;
+.content{
+    width: 70%;
+    max-width: 1280px;
+    margin: 0 auto;
+    
 }
 
-li{
+#add-book-form {
+    margin-top: 10px;
+    background-color: brown;
     display: flex;
-    flex-flow: row;
-    
-    justify-self: auto;
-    
+    flex-wrap: wrap;
+    border: 2px solid var(--dark1);
+    border-radius: 15px;
+}
+.form-item {
+    padding: 9px;
+    min-width: 33px;
+    flex-grow: 1;
+}
+.titleInputHolder{
+    /* margin: 3px solid rgb(19, 15, 15); */
+    background-color: rgb(227, 255, 198);
+}
+.authorInputHolder{
+    background-color: rgb(255, 198, 181);
 }
 /* 
 // RANGE style */
- 
+.rangeContainer {
 
-   input:focus{
-    outline:none;
-  }
-  .value {
-
-    border-bottom: 1px dashed #bdc3c7;
-    border-top: 1px dashed #bdc3c7;
+      background-color: rgb(220, 255, 243);
+      display: flex;
+}
+.rangeValue {
     text-align: center;
     font-weight: bold;
-    font-size: 1em;
-    width: 120px; 
-    height: 100px;
-    line-height: 60px;
-    margin: 40px auto;
-    letter-spacing: -.07em;
-    text-shadow: white 2px 2px 2px;
-  }
 
-  input[type="range"] {
+}
+.slider {
+
+}
+
+input[type="range"] {
     display: block;
     -webkit-appearance: none;
-    background-color: #0899fa;
-    width: 120px;
-    height: 5px;
-    border-radius: 5px;
+    background-color: #6699b9;
+    border-radius: 52px;
     margin: 0 auto;
     outline: 0;
   }
   
-    input[type="range"]:hover {
+input[type="range"]:hover {
       background-color: white;
       
-    }
-    input[type="range"]:active {
+}
+input[type="range"]:active {
       transform: scale(1.1);
-    }
+}
+
+/* ////////// BOOKLIST ///////////// */
+
+ul{
+    
+    margin-top: 10px;
+    background-color: darkgoldenrod;
+    list-style: none;
+}
+
+li{
+    border-bottom: darkolivegreen 2px solid;
+    border-right: darkolivegreen 5px solid;
+    border-left:  darkolivegreen 3px solid;
+    background-color: darkkhaki;
+    display: flex;
+    flex-flow: row;
+    justify-self: auto;
+    
+    
+}
