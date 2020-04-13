@@ -1,4 +1,5 @@
 :root{
+    font-size: 62.5%;
     --primary-background: #73683b;
     --secondary-background: #899878;
 
@@ -8,12 +9,16 @@
     --light2: #e4e6c3;
     --light3: #ffffff;
 } 
+p{
+    font-size: 6.6rem;
+}
 
  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-size: 1.1rem;
  }
 
  body{
@@ -44,6 +49,7 @@
 
   .header > h1 {
       color: var(--light1);
+      font-size: 4rem;
   }
 
 
@@ -56,7 +62,6 @@
 
 #add-book-form {
     margin-top: 10px;
-    background-color: brown;
     display: flex;
     flex-wrap: wrap;
     border: 2px solid var(--dark1);
@@ -66,19 +71,22 @@
     padding: 9px;
     min-width: 33px;
     flex-grow: 1;
+    justify-content: space-between;
 }
 .titleInputHolder{
-    /* margin: 3px solid rgb(19, 15, 15); */
-    background-color: rgb(227, 255, 198);
+
+    
 }
 .authorInputHolder{
-    background-color: rgb(255, 198, 181);
+
+    
 }
 /* 
 // RANGE style */
 .rangeContainer {
 
-      background-color: rgb(220, 255, 243);
+
+    
       display: flex;
 }
 .rangeValue {
@@ -93,14 +101,15 @@
 input[type="range"] {
     display: block;
     -webkit-appearance: none;
-    background-color: #6699b9;
+
+    background-color: rgb(97, 193, 223);
     border-radius: 52px;
     margin: 0 auto;
     outline: 0;
   }
   
 input[type="range"]:hover {
-      background-color: white;
+    background-color: #517a94;
       
 }
 input[type="range"]:active {
@@ -109,21 +118,130 @@ input[type="range"]:active {
 
 /* ////////// BOOKLIST ///////////// */
 
-ul{
-    
-    margin-top: 10px;
-    background-color: darkgoldenrod;
-    list-style: none;
+
+#book-list{
+    margin-top: 1em;
+    /* background-color: rgb(153, 239, 241); */
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+}
+/* // EACH BOOK ENTRY */
+#book-list > div{ 
+    background-color: var(--light1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 5px;
+
+    border-bottom: solid 2px black;
+    border-left: solid 2px black;
+    border-radius: 32px;
+}
+.BookListHeader > div{
+    background-color: var(--light2);
+    font-weight: bold;
 }
 
-li{
-    border-bottom: darkolivegreen 2px solid;
-    border-right: darkolivegreen 5px solid;
-    border-left:  darkolivegreen 3px solid;
-    background-color: darkkhaki;
-    display: flex;
-    flex-flow: row;
-    justify-self: auto;
+.entryData {
+    padding: 1rem;
+
+    }
+
+.titleHeader {
+    flex-grow: 3;
+    flex-basis: 25rem;
+
+     
+}
+.authorHeader {
+    flex-grow: 2;
+    flex-basis: 20rem;
+
+}
+.ratingHeader {
+    flex-grow: 2;
+    /* flex-basis: 5rem;
+    text-align: center; */
+
+}
+.crossHeader {
+    flex-grow: 1;
+    background-color: yellow;
+   /* justify-content: space-between;
+    margin-left: auto; */
+
+}    
+.title {    
+    flex-basis: 25rem;
+    flex-grow: 3;
+
+    /* background-color: darkgreen; */
+}
+.author {
+    flex-basis: 20rem;
+    flex-grow: 2;
+    /* background-color: rgb(27, 88, 27); */
+}
+.rating {
+    flex-grow: 2;
+    flex-basis: 5rem;
+    text-align: center;
+    /* background-color: rgb(250, 255, 250); */
+}
+
+
+.cross {
+    flex-grow: 2;
+    /* background-color: rgb(117, 224, 113); */
+
     
+    margin-left: auto;
+}
+
+
+
+
+
+@media screen and (max-width: 460px) {
+
+    .header h1{
+        font-size: 2rem;
+    }
+    .content{
+        
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+
+    }
+    #add-book-form {
+        width: 98%;
+        margin-left: 1%;
+        /* background-color: brown;
+        display: flex;
+        flex-wrap: wrap;
+        border: 2px solid var(--dark1);
+        border-radius: 15px; */
+    }
     
+    .titleHeader {
+        flex-basis: 17rem;
+
+    }
+    .authorHeader {
+        flex-basis: 13rem;
+
+    }
+
+    .title {    
+        flex-basis: 17rem;
+    
+        /* background-color: darkgreen; */
+    }
+    .author {
+        flex-basis: 13rem;
+        /* background-color: rgb(27, 88, 27); */
+    }
 }

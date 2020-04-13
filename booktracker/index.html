@@ -47,17 +47,23 @@
                     <input class="authorInput" type="text" name="author" placeholder="Author">
                 </div>                
                 <div class="form-item rangeContainer">
-                    <div class="rangeValue">0</div>
-                    <input class="slider" type="range" min="0" max="100" step="1" value="0" name="rating" id="rating-range" >
+                    <div class="rangeValue">Rating: </div>
+                    <input class="slider" type="range" min="0" max="100" step="1" value="0" name="rating" id="rating-range" defaultValue="0">
                 </div>
                 <div class="form-item addBookButtonHolder">
                     <button class="addBookButton">Add book</button>
                 </div>
             </form>
 
-            <ul id="book-list">
-
-            </ul>
+            <div id="book-list">
+                <div class="BookListHeader">
+                    <div class="titleHeader entryData">Title</div>
+                    <div class="authorHeader entryData">Author</div>
+                    <div class="ratingHeader entryData">Rating</div>
+                    <div class="crossHeader entryData"></div>
+                </div>
+            </div>
+          
             
         </div>
 
